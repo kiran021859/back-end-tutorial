@@ -7,7 +7,8 @@ console.log(first,'\n',second);
 writeFileSync(
     './content/result-sync.txt',
     `Here is the result: ${first}, ${second}\n`,
-     {flag: 'a'}
+     {flag: 'a'},
+     //console.log('helo')
      );
 
 
