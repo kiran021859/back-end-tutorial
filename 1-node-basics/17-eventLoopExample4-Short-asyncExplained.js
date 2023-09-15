@@ -6,7 +6,7 @@ const {readFile, writeFile} = require('fs').promises;
 
 const start = async() => {
 try {
-    const first = await readFile('./content/first.txt', 'utf8');
+    
     console.log(first);
     const second = await readFile('./content/second.txt', 'utf8');
     console.log(second);
