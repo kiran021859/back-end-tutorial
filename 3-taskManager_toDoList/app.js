@@ -7,7 +7,7 @@ const tasks = require('./routes/task');
 const connectDB = require('./DB/connect')
 require('dotenv').config() // .env connection
 
-app.use(express.static('./methods-public'))
+app.use(express.static('./public'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
