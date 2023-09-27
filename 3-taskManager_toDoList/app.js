@@ -15,7 +15,8 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
 app.use('/api/v1/tasks', tasks );
-app.use(  notFound  )
+app.use(notFound);
+app.use(errorHandle);
 
 
 const start = async () => {
