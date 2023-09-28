@@ -1,11 +1,11 @@
 require('dotenv').config();
-require('express-async-errors')
+require('express-async-errors');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 // async errors 
 const notFound = require('./middleware/not-found');
-const errorHandle = require('./middleware/error-handler');
+const errorHandlerMiddleware = require('./middleware/error-handler');
 // database connection
 const connectDB = require('./db/connect');
 // Router functions
@@ -18,7 +18,7 @@ app.use('/api/v1/products', router)
 
 //middleWare
 app.use(notFound);
-app.use(errorHandle);
+app.use(errorHandlerMiddleware);
 
 const start = async ()=>{
     try {
